@@ -2,10 +2,13 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div>
-        <Head>
+    <div className="mx-auto lg:max-w-screen-xl">
+      <Head>
         <title>Namaste Reiki and Meditation Circle</title>
-        <meta name="description" content="Namaste Reiki and Meditation Circle" />
+        <meta
+          name="description"
+          content="Namaste Reiki and Meditation Circle"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
