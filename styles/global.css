@@ -1,0 +1,4 @@
+body {
+  @apply bg-pink-100;
+  font-family: 'Rubik';
+}
