@@ -1,8 +1,11 @@
 import Head from 'next/head'
 
+import Hero from '../components/Hero/Hero'
+import Navbar from '../components/Navbar/Navbar'
+
 export default function Home() {
   return (
-    <div className="text-gray-700">
+    <div className="text-gray-800">
       <Head>
         <title>Namaste Reiki and Meditation Circle</title>
         <meta
@@ -16,32 +19,12 @@ export default function Home() {
         />
       </Head>
 
-      <header className="bg-white">
-        <div className="grid grid-cols-2 items-baseline justify-between mx-auto lg:max-w-screen-xl px-12 py-12">
-          <div className="font-semibold text-2xl">
-            Namaste Reiki and Meditation Circle
-          </div>
-          <div className="text-right">
-            <ul className="inline">
-              <li className="inline mr-8">Home</li>
-              <li className="inline mr-8">About</li>
-              <li className="inline mr-8">Treatments</li>
-              <li className="inline mr-8">Praise</li>
-              <li className="inline">Contact</li>
-            </ul>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
-      <main className="mx-auto lg:max-w-screen-xl px-8 py-20">
-        <div className="py-40 px-8 bg-main-hero bg-right-top bg-no-repeat bg-contain mb-20 mr-8">
-          <h1 className="font-serif text-5xl font-semibold w-1/2">
-            Reiki and meditation for your health and well being
-          </h1>
-          <p className="text-xl my-8">Stress less. Move more. Sleep soundly.</p>
-        </div>
+      <main className="mx-auto lg:max-w-screen-xl pt-32 px-8 pb-20">
+        <Hero />
 
-        <div className="bg-gray-50 rounded-2xl grid grid-cols-2 p-12">
+        <div className="bg-gray-50 rounded-2xl grid grid-cols-2 px-12 py-24">
           <h2 className="text-4xl col-span-2 font-semibold mb-6">
             Why choose me?
           </h2>
@@ -76,7 +59,7 @@ export default function Home() {
         </div>
 
         <div className="py-20">
-          <h2 className="text-5xl font-semibold text-center p-8 mb-4">
+          <h2 className="text-5xl text-gray-50 text-center p-8 mb-4">
             Treatments
           </h2>
           <div className="grid grid-cols-2 gap-8">
@@ -151,12 +134,10 @@ export default function Home() {
 
       <footer className="bg-black text-white">
         <div className="mx-auto lg:max-w-screen-xl p-8">
-          <p className="text-2xl font-semibold mb-4">
-            Namaste Reiki and Meditation Circle
-          </p>
+          <p className="text-2xl mb-4">Namaste Reiki and Meditation Circle</p>
           <div className="grid grid-cols-2">
             <div>
-              <p className="font-semibold">Address</p>
+              <p className="text-xl">Address</p>
               <p>
                 Bailey Close, <br />
                 Martham, <br />
@@ -165,7 +146,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <p className="font-semibold">Lynda Warne</p>
+              <p className="text-xl">Lynda Warne</p>
               <p>Reiki Master</p>
             </div>
           </div>
