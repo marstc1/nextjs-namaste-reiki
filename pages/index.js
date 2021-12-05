@@ -1,9 +1,17 @@
 import Head from 'next/head'
+import { LocationPin } from 'styled-icons/entypo'
+import { PrayingHands } from 'styled-icons/fa-solid'
+import { Schedule } from 'styled-icons/material-twotone'
 
+import Container from '../components/Container/Container'
 import Hero from '../components/Hero/Hero'
 import Navbar from '../components/Navbar/Navbar'
+import Praise from '../sections/Praise/Praise'
 
 export default function Home() {
+  const iconClassName = 'inline h-12 w-12 my-8 text-green-500'
+  const iconTextClassName = 'text-green-500 font-semibold'
+
   return (
     <div className="text-gray-800">
       <Head>
@@ -19,49 +27,66 @@ export default function Home() {
         />
       </Head>
 
-      <Navbar />
+      <main>
+        <Navbar />
 
-      <main className="mx-auto lg:max-w-screen-xl pt-32 px-8 pb-20">
-        <Hero />
+        <Container variant="hero">
+          <Hero />
+        </Container>
 
-        <div className="bg-gray-50 rounded-2xl grid grid-cols-2 px-12 py-24">
-          <h2 className="text-4xl col-span-2 font-semibold mb-6">
-            Why choose me?
-          </h2>
-          <div className="mr-12">
-            <img
-              className="shadow-lg transform -rotate-1"
-              src="./images/LyndaWarne.jpg"
-              alt="Lynda Warne - Reiki Master"
-            />
+        <Container variant="primary">
+          <h2 className="text-green-500">ABOUT</h2>
+          <h3>Why choose me?</h3>
+          <div className="grid grid-cols-2 px-12">
+            <div className="mr-12">
+              <img
+                className="shadow-lg transform -rotate-1"
+                src="./images/LyndaWarne.jpg"
+                alt="Lynda Warne - Reiki Master"
+              />
+            </div>
+
+            <div>
+              <p className="text-lg mb-6 leading-8">
+                I have been healing for more than 30 years. I became a Healer
+                Member for the National Federation Of Spiritual Healers (NFSH)
+                for twelve years. I then took Reiki to Master level which I now
+                practice from my home where I now live in Martham Village, Great
+                Yarmouth.
+              </p>
+
+              <p className="text-lg mb-6 leading-8">
+                I worked in the National Health Service from 1976 to 2009 in
+                various locations and departments before being made redundant in
+                2009 when the department I worked in at The Royal National
+                Orthopaedic Hospital, Stanmore, Middlesex was closed. I then
+                relocated to Norfolk. I also successfully run a monthly
+                Meditation Circle at my home in Martham.
+              </p>
+
+              <p className="text-lg leading-8">Peace & Light, Namaste.</p>
+            </div>
           </div>
-
-          <div>
-            <p className="text-lg mb-6 leading-8">
-              I have been healing for more than 30 years. I became a Healer
-              Member for the National Federation Of Spiritual Healers (NFSH) for
-              twelve years. I then took Reiki to Master level which I now
-              practice from my home where I now live in Martham Village, Great
-              Yarmouth.
-            </p>
-
-            <p className="text-lg mb-6 leading-8">
-              I worked in the National Health Service from 1976 to 2009 in
-              various locations and departments before being made redundant in
-              2009 when the department I worked in at The Royal National
-              Orthopaedic Hospital, Stanmore, Middlesex was closed. I then
-              relocated to Norfolk. I also successfully run a monthly Meditation
-              Circle at my home in Martham.
-            </p>
-
-            <p className="text-lg leading-8">Peace & Light, Namaste.</p>
+          <div className="grid grid-cols-3 px-12 pt-12 align-middle items-center text-center">
+            <div>
+              <PrayingHands className={iconClassName} />
+              <p className={iconTextClassName}>30+ years experience</p>
+            </div>
+            <div>
+              <LocationPin className={iconClassName} />
+              <p className={iconTextClassName}>Martham, Norfolk</p>
+            </div>
+            <div>
+              <Schedule className={iconClassName} />
+              <p className={iconTextClassName}>Flexible booking times</p>
+            </div>
           </div>
-        </div>
+        </Container>
 
-        <div className="py-20">
-          <h2 className="text-5xl text-gray-50 text-center p-8 mb-4">
-            Treatments
-          </h2>
+        <Container>
+          <h2 className="text-gray-50">TREATMENTS</h2>
+          <h3>What I Offer</h3>
+
           <div className="grid grid-cols-2 gap-8">
             <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-12">
               <h3 className="text-2xl text-center font-semibold mb-4">
@@ -129,10 +154,12 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </div>
+        </Container>
+
+        <Praise />
       </main>
 
-      <footer className="bg-black text-white">
+      <footer className="bg-gray-800 text-white">
         <div className="mx-auto lg:max-w-screen-xl p-8">
           <p className="text-2xl mb-4">Namaste Reiki and Meditation Circle</p>
           <div className="grid grid-cols-2">

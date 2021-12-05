@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <header
       className={`z-50 bg-transparent fixed w-full transition-all duration-700 ease-in-out ${
-        navBarBgVisible && 'bg-white text-gray-800 shadow-md opacity-95'
+        navBarBgVisible && 'bg-white text-gray-800 opacity-95'
       }`}
     >
       <div className="grid grid-cols-2 items-center justify-between mx-auto lg:max-w-screen-xl px-12 py-4">
@@ -33,7 +33,7 @@ const Navbar = () => {
           />
           Namaste
         </div>
-        <div className="text-right">
+        <div className="text-right font-semibold">
           <ul className="inline">
             <li className="inline mr-8">About</li>
             <li className="inline mr-8">Treatments</li>

@@ -1,4 +1,23 @@
 body {
-  background-color: #89cac7;
+  @apply bg-green-600;
+  @apply bg-opacity-60;
   font-family: 'Rubik';
+}
+
+h2 {
+  @apply text-lg;
+  @apply text-center;
+  @apply font-semibold;
+}
+
+h3 {
+  @apply text-4xl;
+  @apply text-center;
+  @apply font-semibold;
+  @apply mb-12;
+}
+
+/* Swiper overrides */
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-white;
 }
