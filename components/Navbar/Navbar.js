@@ -23,7 +23,7 @@ const Navbar = () => {
         navBarBgVisible && 'bg-white text-gray-800 opacity-95'
       }`}
     >
-      <div className="grid lg:grid-cols-2 items-center justify-between mx-auto lg:max-w-screen-xl px-4 lg:px-12 py-4">
+      <div className="grid lg:grid-cols-2 items-center justify-between mx-auto lg:max-w-screen-xl px-4 md:px-12 py-4">
         <div className="flex items-center text-5xl lg:text-6xl font-serif">
           Lynda Warne
         </div>

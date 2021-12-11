@@ -28,6 +28,7 @@ module.exports = {
         'main-hero': "url('/images/main.png')",
         'bg-footer': "url('/images/bg-footer.png')",
         'bg-feedback': "url('/images/bg-feedback.png')",
+        'bg-healing': "url('/images/bg-healing.jpg')",
         wave: "url('/images/wave.svg')",
       },
       zIndex: {

@@ -21,11 +21,8 @@ export default function Home() {
   return (
     <div className="text-gray-800">
       <Head>
-        <title>Namaste Reiki and Meditation Circle</title>
-        <meta
-          name="description"
-          content="Namaste Reiki and Meditation Circle"
-        />
+        <title>Lynda Warne | Reiki and Meditation</title>
+        <meta name="description" content="Reiki and Meditation Circle" />
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
@@ -47,7 +44,7 @@ export default function Home() {
         <Container variant="primary">
           <h2 className="text-green-500">ABOUT</h2>
           <h3>Why choose me?</h3>
-          <div className="grid lg:grid-cols-2 lg:px-12 items-center">
+          <div className="grid gap-4 md:grid-cols-2 md:px-12 lg:items-center">
             <div className="mb-8 lg:mb-0 lg:mr-12">
               <img
                 className="shadow-lg transform -rotate-1"
@@ -89,9 +86,11 @@ export default function Home() {
           <h2 className="text-gray-50">SERVICES</h2>
           <h3>What I offer</h3>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-12">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-8 lg:p-12">
               <h3 className="text-6xl text-center mb-4">Reiki Healing</h3>
+
+              <img className="w-full my-8" src="./images/healing.jpg" alt="" />
               <p>
                 Reiki is a Japanese form of energy healing, which is a subset of
                 alternative medicine.
@@ -116,11 +115,17 @@ export default function Home() {
               <Button variant="secondary">Request a booking</Button>
             </div>
 
-            <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-12">
+            <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-8 lg:p-12">
               <h3 className="text-6xl text-center mb-4">Meditation Circle</h3>
+
+              <img
+                className="w-full my-8"
+                src="./images/meditation.jpg"
+                alt=""
+              />
               <p>
-                This service is open to everyone. All meditation practice
-                levels, including first timers, are welcome.
+                The meditation circle is open to everyone. All meditation
+                practice levels, including first timers, are welcome.
               </p>
 
               <h4 className="mt-4 font-semibold">Service Overview</h4>
@@ -152,7 +157,7 @@ export default function Home() {
         <div className="mx-auto relative lg:max-w-screen-xl p-8 pb-0 pt-16">
           <h2>CONTACT</h2>
           <h3>Get in touch</h3>
-          <div className="grid lg:grid-cols-2 gap-y-8 pt-8">
+          <div className="grid md:grid-cols-2 gap-y-8 pt-8">
             <div className="col-span-1">
               <p className="text-xl">Lynda Warne</p>
 
@@ -165,9 +170,10 @@ export default function Home() {
               </p>
 
               <p>Email: lyndawarne1@aol.com</p>
+              <p>Phone: 07984 828407</p>
             </div>
             <div className="col-span-1 row-span-2 mb-36">
-              <p className="text-xl">General Enquires</p>
+              <p className="text-xl">Message me</p>
 
               <Formik
                 initialValues={{ name: '', email: '' }}
@@ -193,7 +199,7 @@ export default function Home() {
             </div>
             <div
               style={{ filter: 'brightness(0)' }}
-              className="col-span-1 absolute lg:w-1/3 h-80 bottom-0 bg-main-hero bg-cover bg-contain bg-no-repeat bg-center"
+              className="col-span-1 absolute md:w-1/3 h-80 bottom-0 bg-main-hero bg-cover bg-contain bg-no-repeat bg-center"
             ></div>
           </div>
         </div>
