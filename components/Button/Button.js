@@ -1,6 +1,23 @@
-const Button = ({ children }) => {
+const Button = ({ children, variant }) => {
+  const variantClass =
+    variant === 'secondary'
+      ? 'float-right hover:text-green-500 hover:border-green-400 border-transparent bg-green-300 text-gray-800'
+      : 'text-white border-white hover:border-transparent hover:bg-white hover:text-green-400'
   return (
-    <button className="transition-colors duration-500 font-semibold bg-transparent hover:bg-white hover:text-green-400 text-white py-2 px-4 border-2 border-white hover:border-transparent rounded">
+    <button
+      className={`
+      uppercase
+      transition-colors 
+      duration-500 
+      font-light
+      rounded
+      py-2 
+      px-4
+      mt-6
+      border-2 
+      bg-transparent 
+      ${variantClass}`}
+    >
       {children}
     </button>
   )

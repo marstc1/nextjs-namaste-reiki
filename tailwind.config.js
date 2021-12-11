@@ -12,9 +12,22 @@ module.exports = {
       gray: colors.trueGray,
       green: colors.emerald,
     },
+    fontFamily: {
+      serif: [
+        'corinthia',
+        'ui-serif',
+        'Georgia',
+        'Cambria',
+        'Times New Roman',
+        'Times',
+        'serif',
+      ],
+    },
     extend: {
       backgroundImage: {
         'main-hero': "url('/images/main.png')",
+        'bg-footer': "url('/images/bg-footer.png')",
+        'bg-feedback': "url('/images/bg-feedback.png')",
         wave: "url('/images/wave.svg')",
       },
       zIndex: {

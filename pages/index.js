@@ -1,8 +1,14 @@
+import {
+  Field,
+  Form,
+  Formik,
+} from 'formik'
 import Head from 'next/head'
 import { LocationPin } from 'styled-icons/entypo'
 import { PrayingHands } from 'styled-icons/fa-solid'
 import { Schedule } from 'styled-icons/material-twotone'
 
+import Button from '../components/Button/Button'
 import Container from '../components/Container/Container'
 import Hero from '../components/Hero/Hero'
 import Navbar from '../components/Navbar/Navbar'
@@ -10,7 +16,7 @@ import Praise from '../sections/Praise/Praise'
 
 export default function Home() {
   const iconClassName = 'inline h-12 w-12 my-8 text-green-500'
-  const iconTextClassName = 'text-green-500 font-semibold'
+  const iconTextClassName = 'text-green-500'
 
   return (
     <div className="text-gray-800">
@@ -25,6 +31,10 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Corinthia&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <main>
@@ -37,8 +47,8 @@ export default function Home() {
         <Container variant="primary">
           <h2 className="text-green-500">ABOUT</h2>
           <h3>Why choose me?</h3>
-          <div className="grid grid-cols-2 px-12">
-            <div className="mr-12">
+          <div className="grid lg:grid-cols-2 lg:px-12 items-center">
+            <div className="mb-8 lg:mb-0 lg:mr-12">
               <img
                 className="shadow-lg transform -rotate-1"
                 src="./images/LyndaWarne.jpg"
@@ -46,28 +56,20 @@ export default function Home() {
               />
             </div>
 
-            <div>
-              <p className="text-lg mb-6 leading-8">
-                I have been healing for more than 30 years. I became a Healer
-                Member for the National Federation Of Spiritual Healers (NFSH)
-                for twelve years. I then took Reiki to Master level which I now
-                practice from my home where I now live in Martham Village, Great
-                Yarmouth.
+            <div className="text-lg leading-8">
+              <p>Hello, I&apos;m Lynda.</p>
+              <p>I practice from my home in Martham Village, Great Yarmouth.</p>
+              <p>I have been healing for more than 30 years.</p>
+              <p>
+                I became a Healer Member for the National Federation Of
+                Spiritual Healers (NFSH) for twelve years. I then took Reiki to
+                Master level.
               </p>
-
-              <p className="text-lg mb-6 leading-8">
-                I worked in the National Health Service from 1976 to 2009 in
-                various locations and departments before being made redundant in
-                2009 when the department I worked in at The Royal National
-                Orthopaedic Hospital, Stanmore, Middlesex was closed. I then
-                relocated to Norfolk. I also successfully run a monthly
-                Meditation Circle at my home in Martham.
-              </p>
-
-              <p className="text-lg leading-8">Peace & Light, Namaste.</p>
+              <p>I also successfully run a monthly Meditation Circle.</p>
+              <p>Peace and light, namaste.</p>
             </div>
           </div>
-          <div className="grid grid-cols-3 px-12 pt-12 align-middle items-center text-center">
+          <div className="grid grid-cols-3 lg:px-12 pt-16 align-middle items-center text-center">
             <div>
               <PrayingHands className={iconClassName} />
               <p className={iconTextClassName}>30+ years experience</p>
@@ -84,27 +86,38 @@ export default function Home() {
         </Container>
 
         <Container>
-          <h2 className="text-gray-50">TREATMENTS</h2>
-          <h3>What I Offer</h3>
+          <h2 className="text-gray-50">SERVICES</h2>
+          <h3>What I offer</h3>
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-12">
-              <h3 className="text-2xl text-center font-semibold mb-4">
-                Reiki Healing
-              </h3>
+              <h3 className="text-6xl text-center mb-4">Reiki Healing</h3>
               <p>
                 Reiki is a Japanese form of energy healing, which is a subset of
-                alternative medicine. Reiki practitioners use a technique called
-                palm healing or hands-on healing through which a universal
-                energy is said to be transferred through the palms of the
-                practitioner to the patient in order to encourage emotional or
-                physical healing.
+                alternative medicine.
               </p>
+
+              <h4 className="mt-4 font-semibold">Service Overview</h4>
+              <p>
+                I use a technique called palm healing which a universal energy
+                is transferred through the palms to the patient in order to
+                encourage emotional or physical healing.
+              </p>
+
+              <h4 className="mt-4 font-semibold">Benefits</h4>
+              <ul className="pl-8 mb-4 list-disc">
+                <li>Relieves pain, anxiety, and fatigue</li>
+                <li>Enhances quality of life</li>
+                <li>Boosts mood</li>
+                <li>Treats depression</li>
+                <li>Accelerates The Body’s Self-Healing Ability</li>
+                <li>Cleanses Body of Toxins and Supports Immune System</li>
+              </ul>
+              <Button variant="secondary">Request a booking</Button>
             </div>
+
             <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-12">
-              <h3 className="text-2xl text-center font-semibold mb-4">
-                Meditation Circle
-              </h3>
+              <h3 className="text-6xl text-center mb-4">Meditation Circle</h3>
               <p>
                 This service is open to everyone. All meditation practice
                 levels, including first timers, are welcome.
@@ -114,44 +127,20 @@ export default function Home() {
               <p>
                 This 30-minute session is a guided meditation which will help
                 you remove negative energy, ground yourself, and connect with
-                your inner self. The following areas of focus are part of this
-                service:
+                your inner self.
               </p>
-              <ul className="pl-8 mb-4 list-disc">
-                <li>Clear your chakras, aura and energetic field</li>
-                <li>Remove low vibrational energies</li>
-                <li>Learn how to ground yourself</li>
-                <li>Experience a deeper body connection</li>
-              </ul>
 
               <h4 className="mt-4 font-semibold">Benefits</h4>
-              <p>
-                To experience the benefits of meditation, regular practice is
-                necessary. It’s like a seed and once you cultivate a seed with
-                love, the more it blossoms. Adding this practice to your daily
-                routine enhances your life in many ways. The following are
-                examples of benefits regular meditation offers:
-              </p>
-
-              <p className="mt-4 font-semibold">Physical:</p>
               <ul className="pl-8 mb-4 list-disc">
                 <li>Lowers high blood pressure</li>
-                <li>
-                  Lowers the levels of blood lactate, reducing anxiety attacks
-                </li>
-                <li>
-                  Increases serotonin production that improves mood and behavior
-                </li>
                 <li>Improves the immune system</li>
-              </ul>
-
-              <p className="mt-4 font-semibold">Mental:</p>
-              <ul className="pl-8 mb-4 list-disc">
-                <li>Anxiety decreases</li>
-                <li>Emotional stability improves</li>
-                <li>Creativity increases</li>
+                <li>Decreases anxiety</li>
+                <li>Improves emotional stability</li>
+                <li>Increases creativity</li>
                 <li>Sharpens the mind</li>
               </ul>
+
+              <Button variant="secondary">Find out more</Button>
             </div>
           </div>
         </Container>
@@ -159,23 +148,53 @@ export default function Home() {
         <Praise />
       </main>
 
-      <footer className="bg-gray-800 text-white">
-        <div className="mx-auto lg:max-w-screen-xl p-8">
-          <p className="text-2xl mb-4">Namaste Reiki and Meditation Circle</p>
-          <div className="grid grid-cols-2">
-            <div>
-              <p className="text-xl">Address</p>
+      <footer className="bg-gray-800 text-white bg-bg-footer bg-no-repeat bg-bottom">
+        <div className="mx-auto relative lg:max-w-screen-xl p-8 pb-0 pt-16">
+          <h2>CONTACT</h2>
+          <h3>Get in touch</h3>
+          <div className="grid lg:grid-cols-2 gap-y-8 pt-8">
+            <div className="col-span-1">
+              <p className="text-xl">Lynda Warne</p>
+
               <p>
+                Address: <br />
                 Bailey Close, <br />
                 Martham, <br />
                 Great Yarmouth, <br />
                 Norfolk, NR29 4UD
               </p>
+
+              <p>Email: lyndawarne1@aol.com</p>
             </div>
-            <div>
-              <p className="text-xl">Lynda Warne</p>
-              <p>Reiki Master</p>
+            <div className="col-span-1 row-span-2 mb-36">
+              <p className="text-xl">General Enquires</p>
+
+              <Formik
+                initialValues={{ name: '', email: '' }}
+                onSubmit={async (values) => {
+                  await new Promise((resolve) => setTimeout(resolve, 500))
+                  alert(JSON.stringify(values, null, 2))
+                }}
+              >
+                <Form>
+                  <label htmlFor="Name">Name</label>
+                  <Field id="Name" name="name" type="text" />
+                  <label htmlFor="Email">Email</label>
+                  <Field id="Email" name="email" type="email" />
+                  <label htmlFor="Email">Phone number</label>
+                  <Field id="Phone" name="phone" type="phone" />
+                  <label htmlFor="Message">Message</label>
+                  <textarea id="Message" name="message" rows="4" />
+                  <button type="submit" className="float-right mt-8">
+                    Submit
+                  </button>
+                </Form>
+              </Formik>
             </div>
+            <div
+              style={{ filter: 'brightness(0)' }}
+              className="col-span-1 absolute lg:w-1/3 h-80 bottom-0 bg-main-hero bg-cover bg-contain bg-no-repeat bg-center"
+            ></div>
           </div>
         </div>
       </footer>

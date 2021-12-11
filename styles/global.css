@@ -7,14 +7,64 @@ body {
 h2 {
   @apply text-lg;
   @apply text-center;
-  @apply font-semibold;
 }
 
 h3 {
-  @apply text-4xl;
+  @apply text-7xl;
   @apply text-center;
+  @apply font-extralight;
+  @apply mb-20;
+  @apply font-serif;
+}
+
+p {
+  @apply pb-6;
+}
+
+p:last-child {
+  @apply pb-0;
+}
+
+/* Buttons */
+button {
+  @apply transition-colors;
+  @apply duration-500;
   @apply font-semibold;
-  @apply mb-12;
+  @apply bg-transparent;
+  @apply hover:bg-white;
+  @apply hover:text-green-400;
+  @apply text-white;
+  @apply py-2;
+  @apply px-4;
+  @apply border-2;
+  @apply border-white;
+  @apply hover:border-transparent;
+  @apply rounded;
+}
+
+/* Forms */
+label {
+  @apply block;
+  @apply mb-2;
+  @apply mt-4;
+}
+
+label:first-of-type {
+  @apply mt-0;
+}
+
+input,
+textarea {
+  @apply shadow;
+  @apply appearance-none;
+  @apply border;
+  @apply rounded;
+  @apply w-full;
+  @apply py-2;
+  @apply px-3;
+  @apply text-gray-700;
+  @apply leading-tight;
+  @apply focus:outline-none;
 }
 
 /* Swiper overrides */
