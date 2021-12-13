@@ -171,7 +171,7 @@ export default function Home() {
       <Contact />
       <footer className="relative bg-black text-gray-600 text-xs h-80">
         <span className="absolute w-full bottom-4 text-center">
-          Eleven 11 Online - Copyright 2021
+          Copyright © 2021 - Chris Marston
         </span>
       </footer>
     </div>
