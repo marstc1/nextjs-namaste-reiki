@@ -1,7 +1,12 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import {
   useEffect,
   useState,
 } from 'react'
+
+import { Link } from 'react-scroll'
+
+import { linkProps } from '../../constants/linkProps'
 
 const Navbar = () => {
   const [navBarBgVisible, setNavBarBgVisible] = useState(false)
@@ -17,23 +22,48 @@ const Navbar = () => {
     }
   }, [])
 
+  const logoLinkProps = {
+    ...linkProps,
+    activeClass: 'noUnderline',
+    offset: 0,
+  }
+
   return (
     <header
-      className={`z-50 bg-transparent fixed w-full transition-all duration-700 ease-in-out ${
-        navBarBgVisible && 'bg-white text-gray-800 opacity-95'
+      id="header"
+      className={`z-50 bg-transparent md:fixed w-full transition-all duration-700 ease-in-out ${
+        navBarBgVisible &&
+        'md:bg-white md:text-gray-800 md:opacity-95 bgVisible'
       }`}
     >
       <div className="grid lg:grid-cols-2 items-center justify-between mx-auto lg:max-w-screen-xl px-4 md:px-12 py-4">
         <div className="flex items-center text-5xl lg:text-6xl font-serif">
-          Lynda Warne
+          <Link to="Main" className="noStyle" {...logoLinkProps}>
+            Lynda Warne
+          </Link>
         </div>
         <div className="hidden lg:inline text-right">
           <ul className="inline uppercase">
-            <li className="inline mr-8">About</li>
-            <li className="inline mr-8">Reiki</li>
-            <li className="inline mr-8">Meditation</li>
-            <li className="inline mr-8">Reviews</li>
-            <li className="inline">Contact</li>
+            <li className="inline mr-8">
+              <Link to="About" {...linkProps}>
+                About
+              </Link>
+            </li>
+            <li className="inline mr-8">
+              <Link to="Services" {...linkProps}>
+                Services
+              </Link>
+            </li>
+            <li className="inline mr-8">
+              <Link to="Reviews" {...linkProps}>
+                Reviews
+              </Link>
+            </li>
+            <li className="inline">
+              <Link to="Contact" {...linkProps}>
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

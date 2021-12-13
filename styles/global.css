@@ -67,6 +67,28 @@ textarea {
   @apply focus:outline-none;
 }
 
+/* Links */
+a {
+  @apply cursor-pointer;
+}
+
+a.active {
+  @apply border-b-2;
+  @apply border-green-500;
+}
+
+a:not(.noStyle):hover {
+  @apply text-gray-50;
+  @apply transition-colors;
+  @apply duration-300;
+}
+
+.bgVisible a:not(.noStyle):hover {
+  @apply text-green-500;
+  @apply transition-colors;
+  @apply duration-300;
+}
+
 /* Swiper overrides */
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply bg-white;

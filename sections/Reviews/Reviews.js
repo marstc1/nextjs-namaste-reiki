@@ -18,7 +18,7 @@ import {
 
 import Container from '../../components/Container/Container'
 
-const Praise = () => {
+const Reviews = () => {
   const feedback = [
     {
       clientName: 'Lee C',
@@ -53,7 +53,7 @@ const Praise = () => {
   ]
 
   return (
-    <Container variant="secondary">
+    <Container id="Reviews" variant="secondary">
       <h2 className="text-gray-800 uppercase">Reviews</h2>
       <h3 className="text-gray-50">What my clients say</h3>
       <Swiper
@@ -87,4 +87,4 @@ const Praise = () => {
   )
 }
 
-export default Praise
+export default Reviews
