@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
 
           <Button>
-            <Link to="Services" {...linkProps}>
+            <Link className="noStyle" to="Services" {...linkProps}>
               Services
             </Link>
           </Button>
