@@ -1,7 +1,7 @@
 const Button = ({ children, variant }) => {
   const variantClass =
     variant === 'secondary'
-      ? 'w-full lg:w-auto float-right hover:text-green-500 hover:border-green-400 border-transparent bg-green-500 text-gray-50'
+      ? 'w-full hover:text-green-500 hover:border-green-400 border-transparent bg-green-500 text-gray-50'
       : 'text-white border-white hover:border-transparent hover:bg-white hover:text-green-400'
   return (
     <button

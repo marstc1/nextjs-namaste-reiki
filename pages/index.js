@@ -88,82 +88,174 @@ export default function Home() {
           <h2 className="text-gray-50">SERVICES</h2>
           <h3>What I offer</h3>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-4 lg:p-12 flex flex-col justify-between">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="wrapper antialiased text-gray-900">
               <div>
-                <h3 className="text-6xl text-center mb-4">Reiki Healing</h3>
                 <img
-                  className="w-full my-8"
-                  src="./images/healing.jpg"
+                  src="./images/reiki.jpg"
                   alt=""
+                  className="border-2 border-gray-50 w-full object-cover object-center rounded-lg shadow-md"
                 />
-                <p>
-                  Reiki is a Japanese form of energy healing, which is a subset
-                  of alternative medicine.
-                </p>
 
-                <h4 className="mt-4 font-semibold">Service Overview</h4>
-                <p>
-                  I use a technique called palm healing which a universal energy
-                  is transferred through the palms to the patient in order to
-                  encourage emotional or physical healing.
-                </p>
-
-                <h4 className="mt-4 font-semibold">Benefits</h4>
-                <ul className="pl-8 mb-4 list-disc">
-                  <li>Relieves pain, anxiety, and fatigue</li>
-                  <li>Enhances quality of life</li>
-                  <li>Boosts mood</li>
-                  <li>Treats depression</li>
-                  <li>Accelerates The Body’s Self-Healing Ability</li>
-                  <li>Cleanses Body of Toxins and Supports Immune System</li>
-                </ul>
-              </div>
-              <div>
-                <Button variant="secondary">
-                  <Link className="noStyle" to="Contact" {...linkProps}>
-                    Request a booking
-                  </Link>
-                </Button>
+                <div className="relative px-4 -mt-16">
+                  <div className="bg-white p-6 rounded-lg shadow-xl">
+                    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+                      Reiki Healing
+                    </h4>
+                    <div className="mt-2 mb-4">
+                      £70
+                      <span className="text-gray-600 text-sm">
+                        /per session
+                      </span>
+                    </div>
+                    <p>
+                      Reiki is a Japanese word meaning Universal Life Force
+                      Energy.
+                    </p>{' '}
+                    <p>
+                      Reiki is a Japanese form of energy healing, which is a
+                      subset of alternative medicine, a natural method of
+                      healing.
+                    </p>
+                    <h4 className="mt-4 font-semibold">Service Overview</h4>
+                    <p>
+                      Reiki is a hands on healing method which uses Universal
+                      Life Force Energy.
+                    </p>{' '}
+                    <p>
+                      This is transferred through the Reiki Master to the
+                      patient in order to encourage emotional and physical
+                      healing which contributes to a persons well being.
+                    </p>
+                    <h4 className="mt-4 font-semibold">Benefits</h4>
+                    <ul className="pl-8 mb-4 list-disc">
+                      <li>Relieves pain, anxiety, and fatigue</li>
+                      <li>Enhances quality of life</li>
+                      <li>Boosts mood</li>
+                      <li>Treats depression</li>
+                      <li>Accelerates The Body’s Self-Healing Ability</li>
+                      <li>
+                        Cleanses Body of Toxins and Supports Immune System
+                      </li>
+                    </ul>
+                    <div>
+                      <Link className="noStyle" to="Contact" {...linkProps}>
+                        <Button variant="secondary">Request a booking</Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="col-span-1 rounded-xl bg-gray-50 shadow-sm p-4 lg:p-12 flex flex-col justify-between">
+            <div className="wrapper antialiased text-gray-900">
               <div>
-                <h3 className="text-6xl text-center mb-4">Meditation Circle</h3>
                 <img
-                  className="w-full my-8"
-                  src="./images/meditation.jpg"
+                  src="./images/chakra.jpg"
                   alt=""
+                  className="border-2 border-gray-50 w-full object-cover object-center rounded-lg shadow-md"
                 />
-                <p>
-                  The meditation circle is open to everyone. All meditation
-                  practice levels, including first timers, are welcome.
-                </p>
 
-                <h4 className="mt-4 font-semibold">Service Overview</h4>
-                <p>
-                  This 30-minute session is a guided meditation which will help
-                  you remove negative energy, ground yourself, and connect with
-                  your inner self.
-                </p>
+                <div className="relative px-4 -mt-16  ">
+                  <div className="bg-white p-6 rounded-lg shadow-xl">
+                    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight">
+                      Namaste Meditation Circle
+                    </h4>
 
-                <h4 className="mt-4 font-semibold">Benefits</h4>
-                <ul className="pl-8 mb-4 list-disc">
-                  <li>Lowers high blood pressure</li>
-                  <li>Improves the immune system</li>
-                  <li>Decreases anxiety</li>
-                  <li>Improves emotional stability</li>
-                  <li>Increases creativity</li>
-                  <li>Sharpens the mind</li>
-                </ul>
+                    <div className="mt-2 mb-4">
+                      £30
+                      <span className="text-gray-600 text-sm">
+                        /per session
+                      </span>
+                    </div>
+
+                    <p>
+                      We are a small friendly Meditation Circle for your
+                      Spiritual and Mental well being. We meet monthly at my
+                      home in Martham, Norfolk.
+                    </p>
+
+                    <p>
+                      Come and immerse yourself in a world of inner peace
+                      through Meditation where time is suspended allowing the
+                      body and mind to simply be, a Zen like peace. If you would
+                      like to join us you&apos;ll be most welcome.
+                    </p>
+
+                    <h4 className="mt-4 font-semibold">Service Overview</h4>
+                    <p>
+                      In this 1 hour session we&apos;ll balance the seven main
+                      Chakras (energy centres in the body) and a guided
+                      meditation which will help you remove negative energy,
+                      ground yourself, and connect with your inner self.
+                    </p>
+
+                    <h4 className="mt-4 font-semibold">Benefits</h4>
+                    <ul className="pl-8 mb-4 list-disc">
+                      <li>Lowers high blood pressure</li>
+                      <li>Improves the immune system</li>
+                      <li>Decreases anxiety</li>
+                      <li>Improves emotional stability</li>
+                      <li>Increases creativity</li>
+                      <li>Sharpens the mind</li>
+                    </ul>
+                    <div>
+                      <Link className="noStyle" to="Contact" {...linkProps}>
+                        <Button variant="secondary">Find out more</Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+
+            <div className="wrapper antialiased text-gray-900">
               <div>
-                <Button variant="secondary">
-                  <Link className="noStyle" to="Contact" {...linkProps}>
-                    Find out more
-                  </Link>
-                </Button>
+                <img
+                  src="./images/buddha.jpg"
+                  alt=""
+                  className="border-2 border-gray-50 w-full object-cover object-center rounded-lg shadow-md"
+                />
+
+                <div className="relative px-4 -mt-16  ">
+                  <div className="bg-white p-6 rounded-lg shadow-xl">
+                    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight">
+                      One to One Meditation Sessions
+                    </h4>
+
+                    <div className="mt-2 mb-4">
+                      £50
+                      <span className="text-gray-600 text-sm">
+                        /per session
+                      </span>
+                    </div>
+
+                    <p>
+                      If you are new to Meditation I would recommend one to one
+                      sessions until you feel comfortable with joining the main
+                      group.
+                    </p>
+
+                    <p>This will be a guided session ...</p>
+
+                    <h4 className="mt-4 font-semibold">Service Overview</h4>
+                    <p>These can be done at my home or remotely using Zoom.</p>
+                    <h4 className="mt-4 font-semibold">Benefits</h4>
+                    <ul className="pl-8 mb-4 list-disc">
+                      <li>Lowers high blood pressure</li>
+                      <li>Improves the immune system</li>
+                      <li>Decreases anxiety</li>
+                      <li>Improves emotional stability</li>
+                      <li>Increases creativity</li>
+                      <li>Sharpens the mind</li>
+                    </ul>
+                    <div>
+                      <Link className="noStyle" to="Contact" {...linkProps}>
+                        <Button variant="secondary">Request a booking</Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -192,9 +284,9 @@ export default function Home() {
               </p>
 
               <p>Email: lyndawarne1@aol.com</p>
-              <p>Phone: 07*** 828407</p>
+              <p>Phone: 07984 828407</p>
             </div>
-            <div className="col-span-1 row-span-2 mb-36">
+            <div className="col-span-1 row-span-2 mb-28">
               <p className="text-xl">Message me</p>
 
               <Formik
@@ -221,7 +313,7 @@ export default function Home() {
             </div>
             <div
               style={{ filter: 'brightness(0)' }}
-              className="col-span-1 absolute md:w-1/3 h-80 bottom-0 bg-main-hero bg-cover bg-contain bg-no-repeat bg-center"
+              className="col-span-1 absolute md:w-1/3 h-72 bottom-0 bg-main-hero bg-cover bg-contain bg-no-repeat bg-center"
             ></div>
           </div>
         </div>
