@@ -36,13 +36,13 @@ const Navbar = () => {
         'md:bg-white md:text-gray-800 md:opacity-95 bgVisible'
       }`}
     >
-      <div className="grid lg:grid-cols-2 items-center justify-between mx-auto lg:max-w-screen-xl px-4 md:px-12 py-4">
-        <div className="flex items-center text-5xl lg:text-6xl font-serif">
+      <div className="grid md:grid-cols-12 items-center justify-between mx-auto lg:max-w-screen-xl px-4 md:px-12 py-4">
+        <div className="col-span-4 flex items-center text-5xl lg:text-6xl font-serif">
           <Link to="Main" className="noStyle" {...logoLinkProps}>
             Lynda Warne
           </Link>
         </div>
-        <div className="hidden lg:inline text-right">
+        <div className="hidden md:inline text-right col-span-8">
           <ul className="inline uppercase">
             <li className="inline mr-8">
               <Link to="About" {...linkProps}>

@@ -9,7 +9,7 @@ const Container = ({ children, variant, id }) => {
       {variant === 'hero' && (
         <div className="absolute bottom-0 z-negative w-full h-2/3 bg-wave bg-cover bg-no-repeat bg-center"></div>
       )}
-      <div className={`mx-auto lg:max-w-screen-xl pt-16 px-2 sm:px-8`}>
+      <div className={`mx-auto lg:max-w-screen-xl pt-16 px-4 sm:px-8`}>
         {children}
       </div>
     </div>

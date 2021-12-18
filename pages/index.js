@@ -88,7 +88,7 @@ export default function Home() {
           <h2 className="text-gray-50">SERVICES</h2>
           <h3>What I offer</h3>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             <div className="wrapper antialiased text-gray-900">
               <div>
                 <img
@@ -99,34 +99,33 @@ export default function Home() {
 
                 <div className="relative px-4 -mt-16">
                   <div className="bg-white p-6 rounded-lg shadow-xl">
-                    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
+                    <h4 className="mt-1 h-14 text-xl font-semibold uppercase leading-tight truncate">
                       Reiki Healing
                     </h4>
-                    <div className="mt-2 mb-4">
-                      £70
-                      <span className="text-gray-600 text-sm">
-                        /per session
+                    <div className="mt-2 mb-4 font-semibold">
+                      £25
+                      <span className="text-gray-600 font-normal text-sm">
+                        /per treatment.
+                        <br />
+                        Pre-arranged booking required.
                       </span>
                     </div>
                     <p>
-                      Reiki is a Japanese word meaning Universal Life Force
-                      Energy.
-                    </p>{' '}
-                    <p>
-                      Reiki is a Japanese form of energy healing, which is a
-                      subset of alternative medicine, a natural method of
-                      healing.
+                      Reiki means Universal Life Force Energy in Japanese. Reiki
+                      is a Japanese form of energy healing, which is a subset of
+                      alternative medicine, a natural method of healing.
                     </p>
                     <h4 className="mt-4 font-semibold">Service Overview</h4>
                     <p>
                       Reiki is a hands on healing method which uses Universal
                       Life Force Energy.
-                    </p>{' '}
+                    </p>
                     <p>
                       This is transferred through the Reiki Master to the
                       patient in order to encourage emotional and physical
                       healing which contributes to a persons well being.
                     </p>
+                    <p>Confidentiality is respected at all times.</p>
                     <h4 className="mt-4 font-semibold">Benefits</h4>
                     <ul className="pl-8 mb-4 list-disc">
                       <li>Relieves pain, anxiety, and fatigue</li>
@@ -134,9 +133,7 @@ export default function Home() {
                       <li>Boosts mood</li>
                       <li>Treats depression</li>
                       <li>Accelerates The Body’s Self-Healing Ability</li>
-                      <li>
-                        Cleanses Body of Toxins and Supports Immune System
-                      </li>
+                      <li>Cleanses Body of Toxins</li>
                     </ul>
                     <div>
                       <Link className="noStyle" to="Contact" {...linkProps}>
@@ -158,14 +155,16 @@ export default function Home() {
 
                 <div className="relative px-4 -mt-16  ">
                   <div className="bg-white p-6 rounded-lg shadow-xl">
-                    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight">
+                    <h4 className="mt-1 h-14 text-xl font-semibold uppercase leading-tight">
                       Namaste Meditation Circle
                     </h4>
 
-                    <div className="mt-2 mb-4">
-                      £30
-                      <span className="text-gray-600 text-sm">
-                        /per session
+                    <div className="mt-2 mb-4 font-semibold">
+                      £5
+                      <span className="text-gray-600 font-normal text-sm">
+                        /per session.
+                        <br />
+                        Request to join our next session.
                       </span>
                     </div>
 
@@ -201,7 +200,7 @@ export default function Home() {
                     </ul>
                     <div>
                       <Link className="noStyle" to="Contact" {...linkProps}>
-                        <Button variant="secondary">Find out more</Button>
+                        <Button variant="secondary">Request to join</Button>
                       </Link>
                     </div>
                   </div>
@@ -219,29 +218,41 @@ export default function Home() {
 
                 <div className="relative px-4 -mt-16  ">
                   <div className="bg-white p-6 rounded-lg shadow-xl">
-                    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight">
+                    <h4 className="mt-1 h-14 text-xl font-semibold uppercase leading-tight">
                       One to One Meditation Sessions
                     </h4>
 
-                    <div className="mt-2 mb-4">
-                      £50
-                      <span className="text-gray-600 text-sm">
-                        /per session
+                    <div className="mt-2 mb-4 font-semibold">
+                      £10
+                      <span className="text-gray-600 text-sm font-normal">
+                        /per session. <br />
+                        Pre-arranged booking required.
                       </span>
                     </div>
 
                     <p>
                       If you are new to Meditation I would recommend one to one
-                      sessions until you feel comfortable with joining the main
-                      group.
+                      sessions as an introduction until you feel comfortable
+                      with joining the main group.
                     </p>
 
-                    <p>This will be a guided session ...</p>
+                    <p>
+                      One to one sessions are held at my home in Martham,
+                      Norfolk. Please call, text or use the contact form below
+                      to arrange a day and time which suits you.
+                    </p>
 
                     <h4 className="mt-4 font-semibold">Service Overview</h4>
-                    <p>These can be done at my home or remotely using Zoom.</p>
+                    <p>
+                      This is a guided introduction designed for those seeking
+                      to learn more about mediation and how to meditate in an
+                      environment that is a little more personal than a group
+                      session.
+                    </p>
+
                     <h4 className="mt-4 font-semibold">Benefits</h4>
                     <ul className="pl-8 mb-4 list-disc">
+                      <li>One to one guidance</li>
                       <li>Lowers high blood pressure</li>
                       <li>Improves the immune system</li>
                       <li>Decreases anxiety</li>
@@ -264,66 +275,68 @@ export default function Home() {
         <Reviews />
       </main>
 
-      <div
-        id="Contact"
-        className="bg-gray-800 text-white bg-bg-footer bg-no-repeat bg-bottom"
-      >
-        <div className="mx-auto relative lg:max-w-screen-xl p-8 pb-0 pt-16">
-          <h2>CONTACT</h2>
-          <h3>Get in touch</h3>
-          <div className="grid md:grid-cols-2 gap-y-8 pt-8">
-            <div className="col-span-1">
-              <p className="text-xl">Lynda Warne</p>
+      <div className="flex flex-col min-h-screen">
+        <div
+          id="Contact"
+          className="bg-gray-800 text-white bg-bg-footer bg-repeat-x bg-bottom"
+        >
+          <div className="mx-auto relative lg:max-w-screen-xl p-8 pb-0 pt-16">
+            <h2>CONTACT</h2>
+            <h3>Get in touch</h3>
+            <div className="grid md:grid-cols-2 gap-y-8 pt-8">
+              <div className="col-span-1">
+                <p className="text-xl">Lynda Warne</p>
 
-              <p>
-                Address: <br />
-                Bailey Close, <br />
-                Martham, <br />
-                Great Yarmouth, <br />
-                Norfolk, NR29 4UD
-              </p>
+                <p>
+                  Address: <br />
+                  Bailey Close, <br />
+                  Martham, <br />
+                  Great Yarmouth, <br />
+                  Norfolk, NR29 4UD
+                </p>
 
-              <p>Email: lyndawarne1@aol.com</p>
-              <p>Phone: 07984 828407</p>
+                <p>Email: lyndawarne1@aol.com</p>
+                <p>Phone: 07984 828407</p>
+              </div>
+              <div className="col-span-1 row-span-2 mb-28">
+                <p className="text-xl">Message me</p>
+
+                <Formik
+                  initialValues={{ name: '', email: '' }}
+                  onSubmit={async (values) => {
+                    await new Promise((resolve) => setTimeout(resolve, 500))
+                    alert(JSON.stringify(values, null, 2))
+                  }}
+                >
+                  <Form>
+                    <label htmlFor="Name">Name</label>
+                    <Field id="Name" name="name" type="text" />
+                    <label htmlFor="Email">Email</label>
+                    <Field id="Email" name="email" type="email" />
+                    <label htmlFor="Email">Phone number</label>
+                    <Field id="Phone" name="phone" type="phone" />
+                    <label htmlFor="Message">Message</label>
+                    <textarea id="Message" name="message" rows="4" />
+                    <button type="submit" className="float-right mt-8">
+                      Submit
+                    </button>
+                  </Form>
+                </Formik>
+              </div>
+              <div
+                style={{ filter: 'brightness(0)' }}
+                className="col-span-1 absolute md:w-1/3 h-72 bottom-0 bg-main-hero bg-cover bg-contain bg-no-repeat bg-center"
+              ></div>
             </div>
-            <div className="col-span-1 row-span-2 mb-28">
-              <p className="text-xl">Message me</p>
-
-              <Formik
-                initialValues={{ name: '', email: '' }}
-                onSubmit={async (values) => {
-                  await new Promise((resolve) => setTimeout(resolve, 500))
-                  alert(JSON.stringify(values, null, 2))
-                }}
-              >
-                <Form>
-                  <label htmlFor="Name">Name</label>
-                  <Field id="Name" name="name" type="text" />
-                  <label htmlFor="Email">Email</label>
-                  <Field id="Email" name="email" type="email" />
-                  <label htmlFor="Email">Phone number</label>
-                  <Field id="Phone" name="phone" type="phone" />
-                  <label htmlFor="Message">Message</label>
-                  <textarea id="Message" name="message" rows="4" />
-                  <button type="submit" className="float-right mt-8">
-                    Submit
-                  </button>
-                </Form>
-              </Formik>
-            </div>
-            <div
-              style={{ filter: 'brightness(0)' }}
-              className="col-span-1 absolute md:w-1/3 h-72 bottom-0 bg-main-hero bg-cover bg-contain bg-no-repeat bg-center"
-            ></div>
           </div>
         </div>
-      </div>
 
-      <footer className="relative bg-black text-gray-600 text-xs h-80">
-        <span className="absolute w-full bottom-4 text-center">
-          Copyright © 2021 - Chris Marston
-        </span>
-      </footer>
+        <footer className="relative bg-black text-gray-600 text-xs h-16 flex-grow">
+          <span className="absolute w-full bottom-4 text-center">
+            Copyright © 2021 - Chris Marston
+          </span>
+        </footer>
+      </div>
     </div>
   )
 }

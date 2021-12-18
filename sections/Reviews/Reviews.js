@@ -71,7 +71,7 @@ const Reviews = () => {
             <div className="lg:px-20 text-white">
               <div className="grid grid-cols-1 lg:px-16">
                 <QuoteLeft className="h-12 w-12 p-1" />
-                <span className="leading-8 px-16 text-xl leading-10 font-extralight italic">
+                <span className="leading-8 px-16 md:text-xl leading-10 font-extralight italic">
                   {fb.comment}
                 </span>
                 <div className="flex justify-end">
