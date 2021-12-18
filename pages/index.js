@@ -237,8 +237,16 @@ export default function Home() {
 
                     <p>
                       One to one sessions are held at my home in Martham,
-                      Norfolk. Please call, text or use the contact form below
-                      to arrange a day and time which suits you.
+                      Norfolk. Please call, text or use the
+                      <Link
+                        className="noStyle text-green-600"
+                        to="Contact"
+                        {...linkProps}
+                      >
+                        {' '}
+                        contact form{' '}
+                      </Link>
+                      below to arrange a day and time which suits you.
                     </p>
 
                     <h4 className="mt-4 font-semibold">Service Overview</h4>
