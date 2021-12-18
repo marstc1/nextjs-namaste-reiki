@@ -26,9 +26,9 @@ const Hero = () => {
           </h1>
 
           <div className="mt-6 mb-20 text-sm font-extralight">
-            <span className="mr-4">Reduce stress. </span>
-            <span className="mr-4">Control anxiety. </span>
-            <span>Boost immunity.</span>
+            <span className="mr-4">Reduce stress</span>
+            <span className="mr-4">Control anxiety</span>
+            <span>Boost immunity</span>
           </div>
           <div className="hidden md:inline">
             <Button>

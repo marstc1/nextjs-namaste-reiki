@@ -111,19 +111,18 @@ export default function Home() {
                       </span>
                     </div>
                     <p>
-                      Reiki means Universal Life Force Energy in Japanese. Reiki
-                      is a Japanese form of energy healing, which is a subset of
-                      alternative medicine, a natural method of healing.
+                      Reiki means &apos;universal life force energy&apos; in
+                      Japanese. Reiki is a Japanese form of energy healing,
+                      which is a subset of alternative medicine, a natural
+                      method of healing.
                     </p>
                     <h4 className="mt-4 font-semibold">Service Overview</h4>
                     <p>
-                      Reiki is a hands on healing method which uses Universal
-                      Life Force Energy.
-                    </p>
-                    <p>
-                      This is transferred through the Reiki Master to the
-                      patient in order to encourage emotional and physical
-                      healing which contributes to a persons well being.
+                      Reiki is a hands on healing method which uses universal
+                      life force energy. This is transferred through the Reiki
+                      Master to the patient in order to encourage emotional and
+                      physical healing which contributes to a persons well
+                      being.
                     </p>
                     <p>Confidentiality is respected at all times.</p>
                     <h4 className="mt-4 font-semibold">Benefits</h4>
@@ -132,8 +131,8 @@ export default function Home() {
                       <li>Enhances quality of life</li>
                       <li>Boosts mood</li>
                       <li>Treats depression</li>
-                      <li>Accelerates The Body’s Self-Healing Ability</li>
-                      <li>Cleanses Body of Toxins</li>
+                      <li>Accelerates the body’s self-healing ability</li>
+                      <li>Cleanses body of toxins</li>
                     </ul>
                     <div>
                       <Link className="noStyle" to="Contact" {...linkProps}>
@@ -169,24 +168,24 @@ export default function Home() {
                     </div>
 
                     <p>
-                      We are a small friendly Meditation Circle for your
-                      Spiritual and Mental well being. We meet monthly at my
+                      We are a small friendly meditation circle for your
+                      spiritual and mental well being. We meet monthly at my
                       home in Martham, Norfolk.
                     </p>
 
                     <p>
                       Come and immerse yourself in a world of inner peace
-                      through Meditation where time is suspended allowing the
-                      body and mind to simply be, a Zen like peace. If you would
+                      through meditation where time is suspended allowing the
+                      body and mind to simply be, a zen like peace. If you would
                       like to join us you&apos;ll be most welcome.
                     </p>
 
                     <h4 className="mt-4 font-semibold">Service Overview</h4>
                     <p>
                       In this 1 hour session we&apos;ll balance the seven main
-                      Chakras (energy centres in the body) and a guided
-                      meditation which will help you remove negative energy,
-                      ground yourself, and connect with your inner self.
+                      &apos;Chakras&apos; (energy centres in the body) and a
+                      guided meditation which will help you remove negative
+                      energy, ground yourself, and connect with your inner self.
                     </p>
 
                     <h4 className="mt-4 font-semibold">Benefits</h4>
@@ -231,7 +230,7 @@ export default function Home() {
                     </div>
 
                     <p>
-                      If you are new to Meditation I would recommend one to one
+                      If you are new to meditation I would recommend one to one
                       sessions as an introduction until you feel comfortable
                       with joining the main group.
                     </p>
