@@ -270,6 +270,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="pt-8 text-center text-sm text-gray-50">
+            Please be assured that social distancing rules are adhered to at all
+            times during any of the sessions mentioned above.
+          </div>
         </Container>
 
         <Reviews />
