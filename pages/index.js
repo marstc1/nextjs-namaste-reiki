@@ -4,6 +4,7 @@ import {
   Formik,
 } from 'formik'
 import Head from 'next/head'
+import * as Scroll from 'react-scroll'
 import { Link } from 'react-scroll'
 import { LocationPin } from 'styled-icons/entypo'
 import { PrayingHands } from 'styled-icons/fa-solid'
@@ -19,6 +20,32 @@ import Reviews from '../sections/Reviews/Reviews'
 export default function Home() {
   const iconClassName = 'inline h-12 w-12 my-8 text-green-500'
   const iconTextClassName = 'text-green-500'
+
+  var scroller = Scroll.scroller
+
+  const handleSubmit = (
+    values,
+    { setSubmitting, setErrors, setStatus, resetForm }
+  ) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'EventRegistration_2021_v1', ...values }),
+    })
+      .then(() => {
+        resetForm({})
+        setStatus({ success: true })
+        formSubmitHandler('true')
+        scroller.scrollTo('section3')
+        console.log('Success')
+      })
+      .catch((error) => {
+        console.log(error)
+        setStatus({ success: false })
+        setSubmitting(false)
+        setErrors({ submit: error.message })
+      })
+  }
 
   return (
     <div className="text-gray-800">
@@ -319,23 +346,7 @@ export default function Home() {
                     phone: '',
                     message: '',
                   }}
-                  onSubmit={(values, actions) => {
-                    fetch('/', {
-                      method: 'POST',
-                      headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                      },
-                      body: encode({ ...values }),
-                    })
-                      .then(() => {
-                        alert('Success')
-                        actions.resetForm()
-                      })
-                      .catch(() => {
-                        alert('Error')
-                      })
-                      .finally(() => actions.setSubmitting(false))
-                  }}
+                  onSubmit={handleSubmit}
                 >
                   <Form
                     method="POST"
