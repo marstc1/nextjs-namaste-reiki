@@ -65,7 +65,7 @@ export default function Home() {
                 Master level.
               </p>
               <p>I also successfully run a monthly Meditation Circle.</p>
-              <p>Peace and light, namaste.</p>
+              <p>Peace and Light, Namaste.</p>
             </div>
           </div>
           <div className="grid grid-cols-3 lg:px-12 pt-16 align-middle items-center text-center">
@@ -313,23 +313,40 @@ export default function Home() {
                 <p className="text-xl">Message me</p>
 
                 <Formik
-                  initialValues={{ name: '', email: '' }}
-                  onSubmit={async (values) => {
-                    await new Promise((resolve) => setTimeout(resolve, 500))
-                    alert(JSON.stringify(values, null, 2))
+                  initialValues={{
+                    name: '',
+                    email: '',
+                    phone: '',
+                    message: '',
                   }}
+                  // onSubmit={async (values) => {
+                  //   await new Promise((resolve) => setTimeout(resolve, 500))
+                  //   alert(JSON.stringify(values, null, 2))
+                  // }}
                 >
-                  <Form>
+                  <Form
+                    method="POST"
+                    name="contact"
+                    action="/"
+                    data-netlify="true"
+                  >
+                    <Field name="form-name" value="contact" type="hidden" />
                     <label htmlFor="Name">Name</label>
                     <Field id="Name" name="name" type="text" />
                     <label htmlFor="Email">Email</label>
                     <Field id="Email" name="email" type="email" />
                     <label htmlFor="Email">Phone number</label>
-                    <Field id="Phone" name="phone" type="phone" />
+                    <Field id="Phone" name="phone" type="text" />
                     <label htmlFor="Message">Message</label>
-                    <textarea id="Message" name="message" rows="4" />
+                    <Field
+                      id="Message"
+                      name="message"
+                      rows="4"
+                      type="text"
+                      as="textarea"
+                    />
                     <button type="submit" className="float-right mt-8">
-                      Submit
+                      Send
                     </button>
                   </Form>
                 </Formik>
