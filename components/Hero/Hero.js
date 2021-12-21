@@ -1,22 +1,9 @@
-import { useEffect } from 'react'
-
 import { Link } from 'react-scroll'
 
 import { linkProps } from '../../constants/linkProps'
 import Button from '../Button/Button'
 
 const Hero = () => {
-  const handleMouseMove = (e) => {
-    console.log(e.clientX, e.clientY)
-  }
-
-  useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => {
-      window.removeEventListener('scroll', handleMouseMove)
-    }
-  }, [])
-
   return (
     <div className=" text-white overflow-hidden">
       <div className="flex grid md:grid-cols-12 items-center text-center md:text-left md:mt-20 mb-8">

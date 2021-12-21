@@ -21,6 +21,14 @@ export default function Home() {
   const iconClassName = 'inline h-12 w-12 my-8 text-green-500'
   const iconTextClassName = 'text-green-500'
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&')
+  }
+
   var scroller = Scroll.scroller
 
   const handleSubmit = (
@@ -30,13 +38,13 @@ export default function Home() {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'EventRegistration_2021_v1', ...values }),
+      body: encode({ 'form-name': 'contact', ...values }),
     })
       .then(() => {
         resetForm({})
         setStatus({ success: true })
         formSubmitHandler('true')
-        scroller.scrollTo('section3')
+        scroller.scrollTo('Main')
         console.log('Success')
       })
       .catch((error) => {
@@ -350,6 +358,7 @@ export default function Home() {
                 >
                   <Form
                     method="POST"
+                    onSubmit={handleSubmit}
                     name="contact"
                     action="/"
                     data-netlify="true"

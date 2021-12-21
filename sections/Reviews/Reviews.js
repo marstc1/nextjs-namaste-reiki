@@ -58,13 +58,10 @@ const Reviews = () => {
       <h3 className="text-gray-50">What my clients say</h3>
       <Swiper
         modules={[Autoplay, Pagination, A11y]}
-        // autoHeight
         autoplay={{ delay: 15000 }}
         spaceBetween={50}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
       >
         {feedback.map((fb) => (
           <SwiperSlide key={fb.clientName}>
