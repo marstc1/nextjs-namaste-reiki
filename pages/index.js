@@ -319,10 +319,23 @@ export default function Home() {
                     phone: '',
                     message: '',
                   }}
-                  // onSubmit={async (values) => {
-                  //   await new Promise((resolve) => setTimeout(resolve, 500))
-                  //   alert(JSON.stringify(values, null, 2))
-                  // }}
+                  onSubmit={(values, actions) => {
+                    fetch('/', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                      },
+                      body: encode({ ...values }),
+                    })
+                      .then(() => {
+                        alert('Success')
+                        actions.resetForm()
+                      })
+                      .catch(() => {
+                        alert('Error')
+                      })
+                      .finally(() => actions.setSubmitting(false))
+                  }}
                 >
                   <Form
                     method="POST"
