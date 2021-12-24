@@ -1,8 +1,4 @@
-import {
-  Field,
-  Form,
-  Formik,
-} from 'formik'
+import { Formik } from 'formik'
 import Head from 'next/head'
 import * as Scroll from 'react-scroll'
 import { Link } from 'react-scroll'
@@ -11,6 +7,11 @@ import { PrayingHands } from 'styled-icons/fa-solid'
 import { Schedule } from 'styled-icons/material-twotone'
 
 import Button from '../components/Button/Button'
+import {
+  ContactForm,
+  onSubmit,
+  schema,
+} from '../components/ContactForm/ContactForm'
 import Container from '../components/Container/Container'
 import Hero from '../components/Hero/Hero'
 import Navbar from '../components/Navbar/Navbar'
@@ -21,39 +22,7 @@ export default function Home() {
   const iconClassName = 'inline h-12 w-12 my-8 text-green-500'
   const iconTextClassName = 'text-green-500'
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      )
-      .join('&')
-  }
-
   var scroller = Scroll.scroller
-
-  const handleSubmit = (
-    values,
-    { setSubmitting, setErrors, setStatus, resetForm }
-  ) => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...values }),
-    })
-      .then(() => {
-        resetForm({})
-        setStatus({ success: true })
-        formSubmitHandler('true')
-        scroller.scrollTo('Main')
-        console.log('Success')
-      })
-      .catch((error) => {
-        console.log(error)
-        setStatus({ success: false })
-        setSubmitting(false)
-        setErrors({ submit: error.message })
-      })
-  }
 
   return (
     <div className="text-gray-800">
@@ -348,41 +317,18 @@ export default function Home() {
                 <p className="text-xl">Message me</p>
 
                 <Formik
+                  onSubmit={(values, actions) => {
+                    onSubmit(values, actions)
+                  }}
+                  component={ContactForm}
                   initialValues={{
                     name: '',
                     email: '',
                     phone: '',
                     message: '',
                   }}
-                  onSubmit={handleSubmit}
-                >
-                  <Form
-                    method="POST"
-                    onSubmit={handleSubmit}
-                    name="contact"
-                    action="/"
-                    data-netlify="true"
-                  >
-                    <Field name="form-name" value="contact" type="hidden" />
-                    <label htmlFor="Name">Name</label>
-                    <Field id="Name" name="name" type="text" />
-                    <label htmlFor="Email">Email</label>
-                    <Field id="Email" name="email" type="email" />
-                    <label htmlFor="Email">Phone number</label>
-                    <Field id="Phone" name="phone" type="text" />
-                    <label htmlFor="Message">Message</label>
-                    <Field
-                      id="Message"
-                      name="message"
-                      rows="4"
-                      type="text"
-                      as="textarea"
-                    />
-                    <button type="submit" className="float-right mt-8">
-                      Send
-                    </button>
-                  </Form>
-                </Formik>
+                  validationSchema={schema}
+                />
               </div>
               <div
                 style={{ filter: 'brightness(0)' }}
