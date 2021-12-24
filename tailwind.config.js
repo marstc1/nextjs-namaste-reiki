@@ -11,6 +11,7 @@ module.exports = {
       white: colors.white,
       gray: colors.trueGray,
       green: colors.emerald,
+      red: colors.red,
     },
     fontFamily: {
       serif: [
