@@ -180,7 +180,7 @@ export default function Home() {
                     <p>
                       Come and immerse yourself in a world of inner peace
                       through meditation where time is suspended allowing the
-                      body and mind to simply be, a zen like peace. If you would
+                      body and mind to simply be, a Zen like peace. If you would
                       like to join us you&apos;ll be most welcome.
                     </p>
 
