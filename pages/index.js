@@ -28,7 +28,10 @@ export default function Home() {
     <div className="text-gray-800">
       <Head>
         <title>Lynda Warne | Reiki and Meditation</title>
-        <meta name="description" content="Reiki and Meditation Circle" />
+        <meta
+          name="description"
+          content="Reiki and Meditation Circle. I practice from my home in Martham Village, Great Yarmouth. I have been healing for more than 30 years."
+        />
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
