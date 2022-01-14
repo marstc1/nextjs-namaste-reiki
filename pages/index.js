@@ -1,10 +1,27 @@
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/pagination'
+
 import { Formik } from 'formik'
 import Head from 'next/head'
 import * as Scroll from 'react-scroll'
 import { Link } from 'react-scroll'
+import {
+  QuoteLeft,
+  QuoteRight,
+} from 'styled-icons/boxicons-solid/'
 import { LocationPin } from 'styled-icons/entypo'
 import { PrayingHands } from 'styled-icons/fa-solid'
 import { Schedule } from 'styled-icons/material-twotone'
+import {
+  A11y,
+  Autoplay,
+  Pagination,
+} from 'swiper'
+import {
+  Swiper,
+  SwiperSlide,
+} from 'swiper/react'
 
 import Button from '../components/Button/Button'
 import {
@@ -15,8 +32,8 @@ import {
 import Container from '../components/Container/Container'
 import Hero from '../components/Hero/Hero'
 import Navbar from '../components/Navbar/Navbar'
+import { feedback } from '../constants/feedback'
 import { linkProps } from '../constants/linkProps'
-import Reviews from '../sections/Reviews/Reviews'
 
 export default function Home() {
   const iconClassName = 'inline h-12 w-12 my-8 text-green-500'
@@ -290,7 +307,34 @@ export default function Home() {
           </div>
         </Container>
 
-        <Reviews />
+        <Container id="Reviews" variant="secondary">
+          <h2 className="text-gray-800 uppercase">Reviews</h2>
+          <h3 className="text-gray-50">What my clients say</h3>
+          <Swiper
+            modules={[Autoplay, Pagination, A11y]}
+            autoplay={{ delay: 15000 }}
+            spaceBetween={50}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+          >
+            {feedback.map((fb) => (
+              <SwiperSlide key={fb.clientName}>
+                <div className="lg:px-20 text-white">
+                  <div className="grid grid-cols-1 lg:px-16">
+                    <QuoteLeft className="h-12 w-12 p-1" />
+                    <span className="leading-8 px-16 md:text-xl leading-10 font-extralight italic">
+                      {fb.comment}
+                    </span>
+                    <div className="flex justify-end">
+                      <QuoteRight className="h-12 w-12 p-1 mr-4" />
+                    </div>
+                    <p className="text-right px-20 lg:pt-10">{fb.clientName}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Container>
       </main>
 
       <div className="flex flex-col min-h-screen">
