@@ -21,6 +21,11 @@ import Container from '../../components/Container/Container'
 const Reviews = () => {
   const feedback = [
     {
+      clientName: 'Carl',
+      comment:
+        'Great Reiki session felt very relaxed and at peace with the world afterwards. Beautiful atmospheric room  to have Reiki in. Best session I have ever had , done by a master practitioner.',
+    },
+    {
       clientName: 'Lee C',
       comment:
         'I found Lynda’s meditation class to be very beneficial, and really helped me on my journey to where I am now – finally content within myself. Highly recommended!',
