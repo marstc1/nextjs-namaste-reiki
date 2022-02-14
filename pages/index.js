@@ -47,7 +47,7 @@ export default function Home() {
         <title>Lynda Warne | Reiki and Meditation</title>
         <meta
           name="description"
-          content="Reiki and Meditation Circle. I practice from my home in Martham Village, Great Yarmouth. I have been healing for more than 30 years."
+          content="Lynda's Reiki Sanctuary. Reiki and Meditation Circle. I practice from my home in Martham Village, Great Yarmouth. I have been healing for more than 30 years."
         />
         <link rel="icon" href="/favicon.ico" />
         <link
