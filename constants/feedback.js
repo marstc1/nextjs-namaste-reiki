@@ -1,5 +1,10 @@
 const feedback = [
   {
+    clientName: 'Catherine',
+    comment:
+      'I have been having Reiki treatments from Lynda for the last few months. These treatments are helping me over a very difficult period in my life. I can honestly say that they have helped me a lot. Lynda is a very kind lady, and all her treatments are carried out in a highly professional manner. I can only recommend that you try it for yourself as I am sure you won’t be disappointed. Recently I started Meditation, which I had never done before, again have found this very calming enabling me to focus and bring some inner peace to my turbulent mind.',
+  },
+  {
     clientName: 'Carl',
     comment:
       'Great Reiki session felt very relaxed and at peace with the world afterwards. Beautiful atmospheric room  to have Reiki in. Best session I have ever had , done by a master practitioner.',
